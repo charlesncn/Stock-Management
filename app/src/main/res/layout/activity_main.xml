@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/receipt_background">
+
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/bottom_navigation">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <!--Receipts-->
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/aguafina_script"
+            android:text="sto manager"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/text_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/cardo"
+            android:text="manage all your business tasks here!"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/lL_receipt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+        <LinearLayout
+            android:id="@+id/lL_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_subtitle">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                app:srcCompat="@drawable/receipt" />
+
+            <TextView
+                android:id="@+id/receipt_button"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cardo"
+                android:paddingTop="23dp"
+                android:text="Receipts"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            style="@style/LayoutDivider"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/lL_stock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lL_receipt" />
+
+        <!--current stock-->
+        <LinearLayout
+            android:id="@+id/lL_stock"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                app:srcCompat="@drawable/ic_baseline_store_24" />
+
+            <TextView
+                android:id="@+id/curentStockbutton"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cardo"
+                android:paddingTop="28dp"
+                android:text="Current Stock"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_stock"
+            style="@style/LayoutDivider"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lL_stock" />
+
+        <!--sales-->
+
+        <LinearLayout
+            android:id="@+id/lL_sales"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_stock">
+
+
+            <ImageView
+                android:id="@+id/icon_sales"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                app:srcCompat="@drawable/ic_sales" />
+
+            <TextView
+                android:id="@+id/text_sales"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cardo"
+                android:paddingTop="28dp"
+                android:text="Sales Made"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_sales"
+            style="@style/LayoutDivider"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lL_sales" />
+
+        <!--Analysis-->
+        <LinearLayout
+            android:id="@+id/lL_analysis"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="4dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_sales">
+
+
+            <ImageView
+                android:id="@+id/icon_analysis"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:paddingLeft="15dp"
+                app:srcCompat="@drawable/ic_analysis" />
+
+            <TextView
+                android:id="@+id/text_analysis"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/cardo"
+                android:paddingTop="28dp"
+                android:text="Analysis"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </FrameLayout>-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:menu="@menu/bottom_nav"-->
+<!--        android:background="#fff"/>-->
+
+</RelativeLayout>

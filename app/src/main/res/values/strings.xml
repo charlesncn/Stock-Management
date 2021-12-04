@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sto Manager</string>
+    <string-array name="doctype">
+        <item>--Select Document Type--</item>
+        <item>Cash Sale Receipt</item>
+        <item>Invoice</item>
+        <item>Quotation</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
